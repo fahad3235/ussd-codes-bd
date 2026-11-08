@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USSD Codes BD</title>
+<meta name="description" content="Everyday USSD and mobile-banking codes in Bangladesh - dial or copy in one tap. Fully offline.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <div>
+      <h1 id="title">USSD Codes BD</h1>
+      <p id="tagline" class="tagline"></p>
+    </div>
+    <button id="langBtn" class="lang-btn" type="button" aria-label="Switch language"></button>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="controls" aria-label="Search and filter">
+    <input id="search" type="search" autocomplete="off" spellcheck="false"
+           aria-label="Search codes">
+    <div id="catChips" class="chips" role="group" aria-label="Categories"></div>
+    <div class="rowline">
+      <button id="favToggle" class="chip fav-chip" type="button" aria-pressed="false"></button>
+      <span id="countLabel" class="count" aria-live="polite"></span>
+    </div>
+  </section>
+
+  <section aria-label="Codes">
+    <div id="cards" class="cards"></div>
+    <p id="empty" class="empty" hidden></p>
+  </section>
+
+  <section class="panel" aria-label="Add your own code">
+    <h2 id="addTitle"></h2>
+    <form id="addForm" novalidate>
+      <label class="field"><span id="addCodeLabel"></span>
+        <input id="addCode" type="text" inputmode="text" autocomplete="off"
+               placeholder="*247#" maxlength="20">
+      </label>
+      <label class="field"><span id="addNameLabel"></span>
+        <input id="addName" type="text" autocomplete="off" maxlength="60">
+      </label>
+      <label class="field"><span id="addCatLabel"></span>
+        <select id="addCat"></select>
+      </label>
+      <p id="addError" class="form-error" role="alert" hidden></p>
+      <p id="addOk" class="form-ok" role="status" hidden></p>
+      <button id="addBtn" class="btn primary" type="submit"></button>
+    </form>
+  </section>
+
+  <section class="panel" aria-label="Your data">
+    <h2 id="dataTitle"></h2>
+    <div class="data-btns">
+      <button id="exportBtn" class="btn" type="button"></button>
+      <button id="eraseBtn" class="btn danger" type="button"></button>
+    </div>
+    <textarea id="dataBox" rows="4" spellcheck="false"
+              aria-label="Exported or pasted data"></textarea>
+    <button id="importBtn" class="btn" type="button"></button>
+    <p id="dataMsg" class="form-ok" role="status" hidden></p>
+  </section>
+
+  <footer>
+    <p id="disclaimer"></p>
+    <p id="offlineNote" class="muted"></p>
+  </footer>
+</main>
+
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="js/data.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/logic.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
